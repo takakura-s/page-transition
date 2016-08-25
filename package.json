@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engines": {
+    "npm": "3.6.x",
+    "node": "5.6.x"
+  },
   "scripts": {
     "build": "node ./node_modules/webpack/bin/webpack.js",
-    "heroku-prebuild": "npm install",
+    "postinstall": "npm install",
     "heroku-postbuild": "node ./node_modules/webpack/bin/webpack.js",
     "start": "node ./node_modules/webpack/bin/webpack.js; node server.js",
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
