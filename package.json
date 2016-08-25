@@ -24,7 +24,7 @@
     "url": "https://github.com/takakura-s/page-transition/issues"
   },
   "homepage": "https://github.com/takakura-s/page-transition#readme",
-  "devDependencies": {
+  "dependencies": {
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.14.0",
     "backbone": "^1.3.3",
