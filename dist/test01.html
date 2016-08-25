@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ウィザード</title>
+  <style>
+    #panel {
+      height: 200px;
+      width: 400px;
+      border: 2px solid #ccc;
+      border-radius: 0.5em;
+      padding: 10px;
+    }
+
+    #panel> div {
+      height: 100%;
+      position: relative;
+    }
+
+    #panel .navi {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+
+    #finish,
+    #panel .navi .next {
+      float: right;
+    }
+  </style>
+</head>
+
+<body>
+  <h4>ウィザードテスト</h4>
+
+  <div id="panel"></div>
+
+  <script type="text/html" id="page1">
+    ページ１
+    <div class="navi">
+      <a href="#page2" class="next">＞＞</a>
+    </div>
+  </script>
+  <script type="text/html" id="page2">
+    ページ２
+    <div class="navi">
+      <a href="#" class="prev">＜＜</a>
+      <a href="#page3" class="next">＞＞</a>
+    </div>
+  </script>
+  <script type="text/html" id="page3">
+    ページ３
+    <div class="navi">
+      <a href="#" class="prev">＜＜</a>
+      <a href="#page4" class="next">＞＞</a>
+    </div>
+  </script>
+  <script type="text/html" id="page4">
+    ページ４
+    <div class="navi">
+      <a href="#" class="prev">＜＜</a>
+      <button id="finish">FINISH!!</butotn>
+    </div>
+  </script>
+  <script type="text/html" id="pageEnd">
+    おわり
+  </script>
+  <script type="text/html" id="pageFinished">
+    最初から処理を行って下さい
+  </script>
+
+  <script type="text/javascript" src="bundle.js"></script>
+</body>
+
+</html>
