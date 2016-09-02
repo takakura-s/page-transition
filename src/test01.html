@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <title>ウィザード</title>
+  <link rel="stylesheet" href="bootstrap.min.css" type="text/css" />
   <style>
-    #panel {
+    /*#panel {
       height: 200px;
       width: 400px;
       border: 2px solid #ccc;
@@ -24,52 +25,88 @@
       width: 100%;
       border-top: 1px solid #ccc;
       padding-top: 10px;
-    }
-
-    #finish,
+    }*/
+    /*#finish,
     #panel .navi .next {
       float: right;
-    }
+    }*/
   </style>
 </head>
 
 <body>
-  <h4>ウィザードテスト</h4>
+  <div class="container bg-info">
+    <h4>ウィザードテスト</h4>
 
-  <div id="panel"></div>
+    <div id="panel"></div>
+  </div>
 
   <script type="text/html" id="page1">
-    ページ１
-    <div class="navi">
-      <a href="#page2" class="next">＞＞</a>
+    <div class="panel panel-default">
+      <div class="panel-heading">ページ１</div>
+      <div class="panel-body">
+        aaaa
+      </div>
+      <div class="navi panel-footer text-center">
+        <button type="button" class="btn btn-primary next">次へ</button>
+      </div>
     </div>
   </script>
+
   <script type="text/html" id="page2">
-    ページ２
-    <div class="navi">
-      <a href="#" class="prev">＜＜</a>
-      <a href="#page3" class="next">＞＞</a>
+    <div class="panel panel-default">
+      <div class="panel-heading">ページ２</div>
+      <div class="panel-body">
+        bbbbbb
+      </div>
+      <div class="navi panel-footer text-center">
+        <button type="button" class="btn prev">戻る</button>
+        <button type="button" class="btn btn-primary next">次へ</button>
+      </div>
     </div>
   </script>
+
   <script type="text/html" id="page3">
-    ページ３
-    <div class="navi">
-      <a href="#" class="prev">＜＜</a>
-      <a href="#page4" class="next">＞＞</a>
+    <div class="panel panel-default">
+      <div class="panel-heading">ページ３</div>
+      <div class="panel-body">
+        ccccccc
+      </div>
+      <div class="navi panel-footer text-center">
+        <button type="button" class="btn prev">戻る</button>
+        <button type="button" class="btn btn-primary next">次へ</button>
+      </div>
     </div>
   </script>
+
   <script type="text/html" id="page4">
-    ページ４
-    <div class="navi">
-      <a href="#" class="prev">＜＜</a>
-      <button id="finish">FINISH!!</butotn>
+    <div class="panel panel-default">
+      <div class="panel-heading">ページ４</div>
+      <div class="panel-body">
+        dddddddd
+      </div>
+      <div class="navi panel-footer text-center">
+        <button type="button" class="btn prev">戻る</button>
+        <button id="finish" type="button" class="btn btn-primary">登録</button>
+      </div>
     </div>
   </script>
+
   <script type="text/html" id="pageEnd">
-    おわり
+    <div class="panel panel-default">
+      <div class="panel-heading">おわり</div>
+      <div class="panel-body">
+        eeeeeeeee
+      </div>
+    </div>
   </script>
+
   <script type="text/html" id="pageFinished">
-    最初から処理を行って下さい
+    <div class="panel panel-default">
+      <div class="panel-heading">エラー</div>
+      <div class="panel-body">
+        最初から処理を行って下さい
+      </div>
+    </div>
   </script>
 
   <script type="text/javascript" src="bundle.js"></script>

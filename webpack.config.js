@@ -5,6 +5,7 @@ module.exports = {
   entry: {
     // app: ['./src/app.js']
     javascript: './src/app.js',
+    css: ['./node_modules/bootstrap/dist/css/bootstrap.min.css'],
     html: ['./src/index.html', './src/test01.html']
   },
   output: {
@@ -25,7 +26,7 @@ module.exports = {
         presets: ['es2015']
       }
     }, {
-      test: /\.html$/,
+      test: /\.(html|css)$/,
       loader: 'file?name=[name].[ext]'
         // loader: 'file?name=[path][name].[ext]'
     }]

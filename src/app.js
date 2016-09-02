@@ -2,6 +2,9 @@
 
 let $ = require('jquery');
 let _ = require('underscore');
+global.jQuery = $;
+require('bootstrap');
+
 let Backbone = require('backbone');
 let Marionette = require('backbone.marionette');
 let State = require("./model/State");

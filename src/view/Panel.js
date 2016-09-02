@@ -16,6 +16,7 @@ let PanelView = Backbone.Marionette.ItemView.extend({
         window.history.back();
       },
       "click @ui.next" (e) {
+        window.location.href = '#page' + (State.instance.get('pageNo') + 1);
         State.instance.set('clickNext', true);
       },
       "click @ui.finish" () {

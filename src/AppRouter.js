@@ -9,7 +9,11 @@ let Router = Backbone.Router.extend({
   },
 
   page: (id) => {
-    State.instance.set('pageNo', id || 1);
+    if (!id) {
+      window.location.replace('#page1');
+    } else {
+      State.instance.set('pageNo', id * 1);
+    }
   }
 });
 
